@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'index.html', {'title':'Post List', 'post':post_objects})    
 
 def postdetail(request, slug):
-    post = get_object_or_404(Post, slug)
+    post = get_object_or_404(Post, slug = slug)
     return render(request, 'post.html', {'title':post.title, 'post':post})
 
 def postform(request):

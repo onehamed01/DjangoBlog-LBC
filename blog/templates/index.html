@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Links of Posts</h1>
 {% for x in post %}
-    <a href="{% url 'post' slug=x.slug %}">{{x.title}}</a>
+    <a href="{% url 'postdetail' slug=x.slug %}">{{x.title}}</a>
     <br>
 {% endfor %}
 {% endblock content %}
